@@ -1,3 +1,11 @@
+# installed bluetoothserial
+
+    https://github.com/don/BluetoothSerial
+    phonegap plugin add cordova-plugin-bluetooth-serial
+
+
+
+
 # Hello World PhoneGap Template [![bitHound Score][bithound-img]][bithound-url]
 
 A PhoneGap Hello World template

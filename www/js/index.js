@@ -16,6 +16,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var amihTestPrinter = function(){
+  bluetoothSerial.list(function(list){
+    $('.listbluetoothdevices').html('AMIH list BT devices:<br>' + JSON.stringify(list));
+  }, function(){
+    $('.listbluetoothdevices').html('failed to get list of devices.');
+  });
+};
 var app = {
     // Application Constructor
     initialize: function() {
@@ -34,6 +41,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        amihTestPrinter();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
